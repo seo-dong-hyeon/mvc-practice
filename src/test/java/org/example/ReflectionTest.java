@@ -7,21 +7,25 @@ import org.reflections.Reflections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.annotation.Annotation;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class ReflectionTest {
     private static final Logger logger = LoggerFactory.getLogger(ReflectionTest.class);
 
-    @Test
-    void controllerScan(){
-        // 해당 패키지 하위의 모든 클래스 대상
+    private static Set<Class<?>> getTypesAnnotatedWith(List<Class<? extends Annotation>> annotations) {
         Reflections reflections = new Reflections("org.example");
 
         Set<Class<?>> beans = new HashSet<>();
-        // Controller, Service annotation이 붙어있는 클래스들을 찾아서 저장
-        beans.addAll(reflections.getTypesAnnotatedWith(Controller.class));
-        beans.addAll(reflections.getTypesAnnotatedWith(Service.class));
+        annotations.forEach(annotation -> beans.addAll(reflections.getTypesAnnotatedWith(annotation)));
+        return beans;
+    }
+
+    @Test
+    void controllerScan(){
+        Set<Class<?>> beans = getTypesAnnotatedWith(List.of(Controller.class, Service.class));
         logger.debug("beans : [{}]", beans);
     }
 }
