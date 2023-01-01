@@ -1,4 +1,4 @@
-package org.example.annotaion;
+package org.example.reflection.annotaion;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

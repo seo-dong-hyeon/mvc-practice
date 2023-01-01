@@ -1,8 +1,8 @@
-package org.example;
+package org.example.reflection;
 
-import org.example.annotaion.Controller;
-import org.example.annotaion.Service;
-import org.example.model.User;
+import org.example.reflection.annotaion.Controller;
+import org.example.reflection.annotaion.Service;
+import org.example.reflection.model.User;
 import org.junit.jupiter.api.Test;
 import org.reflections.Reflections;
 import org.slf4j.Logger;
@@ -54,7 +54,7 @@ public class ReflectionTest {
         Class<? extends User> clazz2 = user.getClass();
 
         // 힙 영역에 로드되어 있는 클래스 타입의 객체를 가져오는 방법 3
-        Class<?> clazz3 = Class.forName("org.example.model.User");
+        Class<?> clazz3 = Class.forName("org.example.reflection.model.User");
 
         logger.debug("clazz : [{}],", clazz);
         logger.debug("clazz2 : [{}],", clazz2);

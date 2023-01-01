@@ -3,9 +3,10 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:/.gradle/wrapper/dists/gradle-6.8.1-bin/292llow5buzp6wg9rco3vjhoc/gradle-6.8.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />

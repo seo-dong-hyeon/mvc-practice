@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234b6a06-69d4-4eda-9cc5-1eca995ec74a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ReflectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ReflectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WebApplicationServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/RequestMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/RequestMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/RequestMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/RequestMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/HealthCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/controller/HealthCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ReflectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/reflection/ReflectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +59,7 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -60,6 +76,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.annotaion" />
@@ -68,7 +93,20 @@
       <recent name="org.example.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ReflectionTest.load">
+  <component name="RunManager" selected="Application.WebApplicationServer">
+    <configuration name="WebApplicationServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.WebApplicationServer" />
+      <module name="mvc-practice.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReflectionTest.controllerScan" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -140,6 +178,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WebApplicationServer" />
         <item itemvalue="Gradle.ReflectionTest.load" />
         <item itemvalue="Gradle.ReflectionTest.showClass" />
         <item itemvalue="Gradle.ReflectionTest.controllerScan" />
@@ -176,13 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672582676453</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Reflection practice&#10;&#10;힙 영역에 로드되어 있는 클래스 타입의 객체를 가져오는 3가지 방법">
+      <created>1672583130100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672583130100</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reflection practice&#10;&#10;Controller annotation 찾기" />
     <MESSAGE value="Reflection practice 리팩토링" />
     <MESSAGE value="Reflection practice&#10;&#10;class의 정보(이름, 필드, 생성자, 함수) 가져오기" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reflection practice&#10;&#10;class의 정보(이름, 필드, 생성자, 함수) 가져오기" />
+    <MESSAGE value="Reflection practice&#10;&#10;힙 영역에 로드되어 있는 클래스 타입의 객체를 가져오는 3가지 방법" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reflection practice&#10;&#10;힙 영역에 로드되어 있는 클래스 타입의 객체를 가져오는 3가지 방법" />
   </component>
 </project>
