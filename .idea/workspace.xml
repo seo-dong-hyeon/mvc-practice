@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234b6a06-69d4-4eda-9cc5-1eca995ec74a" name="Changes" comment="Reflection practice 리팩토링">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" afterDir="false" />
+    <list default="true" id="234b6a06-69d4-4eda-9cc5-1eca995ec74a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ReflectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ReflectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +18,26 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mvc-practice" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,7 +68,7 @@
       <recent name="org.example.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ReflectionTest.showClass">
+  <component name="RunManager" selected="Gradle.ReflectionTest.load">
     <configuration name="ReflectionTest.controllerScan" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -63,6 +83,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.example.ReflectionTest.controllerScan&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReflectionTest.load" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.ReflectionTest.load&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -97,6 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ReflectionTest.load" />
         <item itemvalue="Gradle.ReflectionTest.showClass" />
         <item itemvalue="Gradle.ReflectionTest.controllerScan" />
       </list>
@@ -125,12 +169,20 @@
       <option name="project" value="LOCAL" />
       <updated>1672582274767</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Reflection practice&#10;&#10;class의 정보(이름, 필드, 생성자, 함수) 가져오기">
+      <created>1672582676453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672582676453</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reflection practice&#10;&#10;Controller annotation 찾기" />
     <MESSAGE value="Reflection practice 리팩토링" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reflection practice 리팩토링" />
+    <MESSAGE value="Reflection practice&#10;&#10;class의 정보(이름, 필드, 생성자, 함수) 가져오기" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reflection practice&#10;&#10;class의 정보(이름, 필드, 생성자, 함수) 가져오기" />
   </component>
 </project>
