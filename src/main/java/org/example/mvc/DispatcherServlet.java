@@ -1,6 +1,7 @@
 package org.example.mvc;
 
 import org.example.mvc.controller.Controller;
+import org.example.mvc.controller.RequestMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,8 +35,8 @@ public class DispatcherServlet extends HttpServlet {
         logger.info("[DispatcherServlet] service started.");
 
         try {
-            // 요청된 경로에서 컨트롤러를 가져옴
-            Controller handler = requestMappingHandlerMapping.findHandler(request.getRequestURI());
+            // 요청된 request Method와 경로에서 컨트롤러를 가져옴
+            Controller handler = requestMappingHandlerMapping.findHandler(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI()));
             String viewName = handler.handleRequest(request, response);
 
             // forward 요청 -> 해당 뷰로 전달
