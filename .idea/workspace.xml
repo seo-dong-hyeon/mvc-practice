@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234b6a06-69d4-4eda-9cc5-1eca995ec74a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapps/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/UserListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapps/user/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WebApplicationServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/RequestMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/RequestMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/RequestMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/RequestMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/annotaion/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/annotaion/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/HealthCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/controller/HealthCheckController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reflection/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ReflectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/reflection/ReflectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,15 +63,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.annotaion" />
@@ -222,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672583130100</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mvc 프레임워크 practice&#10;&#10;프런트 컨트롤러 패턴(DispatcherServlet) 구현">
+      <created>1672586156423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672586156423</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -230,6 +224,7 @@
     <MESSAGE value="Reflection practice 리팩토링" />
     <MESSAGE value="Reflection practice&#10;&#10;class의 정보(이름, 필드, 생성자, 함수) 가져오기" />
     <MESSAGE value="Reflection practice&#10;&#10;힙 영역에 로드되어 있는 클래스 타입의 객체를 가져오는 3가지 방법" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reflection practice&#10;&#10;힙 영역에 로드되어 있는 클래스 타입의 객체를 가져오는 3가지 방법" />
+    <MESSAGE value="mvc 프레임워크 practice&#10;&#10;프런트 컨트롤러 패턴(DispatcherServlet) 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="mvc 프레임워크 practice&#10;&#10;프런트 컨트롤러 패턴(DispatcherServlet) 구현" />
   </component>
 </project>
