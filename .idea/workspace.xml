@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="234b6a06-69d4-4eda-9cc5-1eca995ec74a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/ForwardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/JspView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/JspViewResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/RedirectView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/view/ViewResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapps/user/form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/filter/CharacterEncodingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/DispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/RequestMappingHandlerMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/UserListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/controller/UserListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mvc/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mvc/repository/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672762722721</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="mvc 프레임워크 practice&#10;&#10;ViewResolver 구현(forward vs redirect 구분해서 적절한 view를 결정)">
+      <created>1672764650542</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672764650542</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -250,6 +246,7 @@
     <MESSAGE value="mvc 프레임워크 practice&#10;&#10;프런트 컨트롤러 패턴(DispatcherServlet) 구현" />
     <MESSAGE value="mvc 프레임워크 practice&#10;&#10;request Handler mapping, controller 구현" />
     <MESSAGE value="mvc 프레임워크 practice&#10;&#10;request mapping(request method 포함)을 위한 Handler key 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvc 프레임워크 practice&#10;&#10;request mapping(request method 포함)을 위한 Handler key 구현" />
+    <MESSAGE value="mvc 프레임워크 practice&#10;&#10;ViewResolver 구현(forward vs redirect 구분해서 적절한 view를 결정)" />
+    <option name="LAST_COMMIT_MESSAGE" value="mvc 프레임워크 practice&#10;&#10;ViewResolver 구현(forward vs redirect 구분해서 적절한 view를 결정)" />
   </component>
 </project>
