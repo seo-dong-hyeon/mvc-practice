@@ -26,30 +26,38 @@ import java.util.List;
 // Servlet -> 톰캣이 싱글톤으로 객체로 만들어 실행
 public class DispatcherServlet extends HttpServlet {
 
-    private RequestMappingHandlerMapping requestMappingHandlerMapping;
-    private static final Logger logger = LoggerFactory.getLogger(DispatcherServlet.class);
-
+    // 인터페이스 타입으로 선언
+    private List<HandlerMapping> handlerMappings;
     private List<HandlerAdapter> handlerAdapters;
     private List<ViewResolver> viewResolvers;
+
+    private static final Logger logger = LoggerFactory.getLogger(DispatcherServlet.class);
 
     // 톰캣이 서블릿 객체를 만들 때 호출
     @Override
     public void init() throws ServletException {
-        requestMappingHandlerMapping = new RequestMappingHandlerMapping();
+        RequestMappingHandlerMapping requestMappingHandlerMapping = new RequestMappingHandlerMapping();
         requestMappingHandlerMapping.init();
+        AnnotationHandlerMapping annotationHandlerMapping = new AnnotationHandlerMapping("org.example");
 
-        handlerAdapters = List.of(new SimpleControllerHandlerAdapter());
-        // 일단 하나만 추가
-        viewResolvers = Collections.singletonList(new JspViewResolver());
+        handlerMappings = List.of(requestMappingHandlerMapping, annotationHandlerMapping);
+        handlerAdapters = List.of(new SimpleControllerHandlerAdapter(), new AnnotationHandlerAdapter());
+        viewResolvers = Collections.singletonList(new JspViewResolver()); // 일단 하나만 추가
     }
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         logger.info("[DispatcherServlet] service started.");
+        String requestURI = request.getRequestURI();
+        RequestMethod requestMethod = RequestMethod.valueOf(request.getMethod());
 
         try {
             // 요청된 request Method와 경로에서 컨트롤러(handler)를 가져옴
-            Controller handler = requestMappingHandlerMapping.findHandler(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI()));
+            Object handler = handlerMappings.stream()
+                            .filter(hm -> hm.findHandler(new HandlerKey(requestMethod, requestURI)) != null)
+                                    .map(hm -> hm.findHandler(new HandlerKey(requestMethod, requestURI)))
+                                            .findFirst()
+                                                    .orElseThrow(() -> new ServletException("No handler for [" + requestMethod + "," + requestURI + "]"));
 
             // handlerAdapter로 해당 handler를 지원하는 adapter를 찾아서 handler 전달
             // adpater 내부에서 해당 handler 실행
