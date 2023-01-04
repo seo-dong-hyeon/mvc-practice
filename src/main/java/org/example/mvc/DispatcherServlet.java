@@ -29,6 +29,7 @@ public class DispatcherServlet extends HttpServlet {
     private RequestMappingHandlerMapping requestMappingHandlerMapping;
     private static final Logger logger = LoggerFactory.getLogger(DispatcherServlet.class);
 
+    private List<HandlerAdapter> handlerAdapters;
     private List<ViewResolver> viewResolvers;
 
     // 톰캣이 서블릿 객체를 만들 때 호출
@@ -37,6 +38,7 @@ public class DispatcherServlet extends HttpServlet {
         requestMappingHandlerMapping = new RequestMappingHandlerMapping();
         requestMappingHandlerMapping.init();
 
+        handlerAdapters = List.of(new SimpleControllerHandlerAdapter());
         // 일단 하나만 추가
         viewResolvers = Collections.singletonList(new JspViewResolver());
     }
@@ -46,15 +48,26 @@ public class DispatcherServlet extends HttpServlet {
         logger.info("[DispatcherServlet] service started.");
 
         try {
-            // 요청된 request Method와 경로에서 컨트롤러를 가져옴
+            // 요청된 request Method와 경로에서 컨트롤러(handler)를 가져옴
             Controller handler = requestMappingHandlerMapping.findHandler(new HandlerKey(RequestMethod.valueOf(request.getMethod()), request.getRequestURI()));
-            String viewName = handler.handleRequest(request, response);
 
+            // handlerAdapter로 해당 handler를 지원하는 adapter를 찾아서 handler 전달
+            // adpater 내부에서 해당 handler 실행
+            // controller에서 viewName을 가져옴
+            // 최종 결과 model and view를 리턴 받음
+            HandlerAdapter handlerAdapter = handlerAdapters.stream()
+                    .filter(ha -> ha.supports(handler))
+                    .findFirst()
+                    .orElseThrow(() -> new ServletException("No adapter for handler [" + handler + "]"));
+
+            ModelAndView modelAndView = handlerAdapter.handle(request, response, handler);
+
+            // rendering
             // UserCreateController -> return viewName = redirect:/users
             // forward vs redirect 구분 필요
             for (ViewResolver viewResolver : viewResolvers){
-                View view = viewResolver.resolveView(viewName);
-                view.render(new HashMap<>(), request, response);
+                View view = viewResolver.resolveView(modelAndView.getViewName());
+                view.render(modelAndView.getModel(), request, response);
             }
         } catch (Exception e) {
             logger.error("exception occurred: [{}]", e.getMessage(), e);
